@@ -48,7 +48,7 @@ $_SESSION['loggedin'] = true; $_SESSION['id'] = $id; $_SESSION['username'] = $us
 header("Location: index.php"); exit; } else { echo "Incorrect password!"; } } else { echo "User not found!"; } 
 
 // Close the connection 
-$stmt->close()
+$stmt->close();
 
 // Set the session variables 
 //$_SESSION["loggedin"] = true;
