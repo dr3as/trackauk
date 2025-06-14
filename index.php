@@ -18,16 +18,16 @@ if (!$conn) {
   }
 
 //fakelogin
-if ($_GET["fakeauth"] == "yes") { 
+//if ($_GET["fakeauth"] == "yes") { 
 
 // Set the session variables 
-$_SESSION["loggedin"] = true;
-$_SESSION["id"] = 1;
-$_SESSION["username"] = "Dr3as";
-$_SESSION["language"] = "2"; 
+//$_SESSION["loggedin"] = true;
+//$_SESSION["id"] = 1;
+//$_SESSION["username"] = "Dr3as";
+//$_SESSION["language"] = "2"; 
 // Redirect to the user's dashboard 
-header("Location: index.php");
-}
+//header("Location: index.php");
+//}
 
 ?>
 <html>
@@ -53,7 +53,15 @@ header("Location: index.php");
             $show = $_GET["show"];
             
         }
-        if ($show == "default"){
+        if (is_null($_SESSION["username"])) {
+            echo "<form action=\"index.php?login=yes\" method=\"post\">
+            <label for=\"username\">Username:</label>
+            <input id=\"username\" name=\"username\" required=\"\" type=\"text\" />
+            <label for=\"password\">Password:</label> <input id=\"password\" name=\"password\" required=\"\" type=\"password\" />
+            <input name=\"login\" type=\"submit\" value=\"Login\" />
+            </form>"
+        }
+        elseif ($show == "default"){
             echo "Welcome, please register, but this does not work atm";
             }
         elseif ($show == "timeline") {
