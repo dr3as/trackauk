@@ -104,10 +104,10 @@ $stmt->close();
             </form>";
         }
         elseif ($show == "default"){
-            if ($resultany_planters = 0) {
+            if ($resultany_planters == 0) {
                 echo "You have not added any planters, please click Add above";
             }
-            elseif ($resultany_plants = 0) {
+            elseif ($resultany_plants == 0) {
                 echo "You have not added any plants, please click Add above";
             }
             else {
