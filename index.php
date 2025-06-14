@@ -74,6 +74,12 @@ $stmt->close();
         <br>
         <?php
         if ($_SESSION["username"]) {
+        $query_anyplanters = mysqli_query($conn, "SELECT * FROM planters WHERE planter_owner_user_id = $_SESSION['id']");
+        $resultany_planters = mysqli_num_rows($query_anyplanters);
+
+        $query_anyplants = mysqli_query($conn, "SELECT * FROM plants  WHERE plant_owner_user_id = $_SESSION['id']");
+        mysqli_num_rows($query_anyplants);
+        $resultany_plants = mysqli_num_rows($query_anyplants);
         echo "<br>
         <br>
         <a href=\"index.php?show=timeline\">Timeline</a>&nbsp &nbsp 
@@ -99,7 +105,13 @@ $stmt->close();
             </form>";
         }
         elseif ($show == "default"){
-            echo "Welcome, please register, but this does not work atm";
+            if (condition) {
+                # code...
+            }
+            else {
+                echo "Welcome, please click on the menu above";
+            }
+            
             }
         elseif ($show == "timeline") {
             echo "Timeline<br>date<br>test<br>date";
@@ -116,6 +128,10 @@ $stmt->close();
         echo "<br>";
         if ($_SESSION["username"]) {
             echo $_SESSION['username'];
+            echo "<br>";
+            echo $resultany_planters;
+            echo "<br>";
+            echo $resultany_plants
             echo "<br><a href=\"index.php?logout=yes\">Log Out</a>";
             }
         ?>
