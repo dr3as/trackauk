@@ -18,7 +18,7 @@ if (!$conn) {
   }
 
 //fakelogin
-if ($_POST["login"] == "yes") { 
+if ($_GET["login"] == "yes") { 
     // Prepare and bind the SQL statement 
 echo "test";
 $stmt = $mysqli->prepare("SELECT user_id, user_password FROM users WHERE user_username = ?"); $stmt->bind_param("s", $username); 
