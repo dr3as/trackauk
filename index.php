@@ -123,8 +123,8 @@ $stmt->close();
             #echo "this and this planters with this and this plants";
             $query_listplanters = "SELECT * FROM planters WHERE planter_owner_user_id = '{$_SESSION['id']}'";
             $result_listplanters = mysqli_query($conn, $query_listplanters);
-            if(mysqli_num_rows($res) > 0){
-                while($row = mysqli_fetch_assoc($res)){
+            if(mysqli_num_rows($result_listplanters) > 0){
+                while($row = mysqli_fetch_assoc($result_listplanters)){
                     echo($row['planter_name']);
                     echo "<br><br>";
                 }
