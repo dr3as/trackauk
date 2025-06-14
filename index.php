@@ -126,7 +126,7 @@ $stmt->close();
             if(mysqli_num_rows($result_listplanters) > 0){
                 while($row = mysqli_fetch_assoc($result_listplanters)){
                     echo($row['planter_name']);
-                    $query_numberplants = "SELECT * FROM plants WHERE plant_owner_user_id = '{$_SESSION['id']}' AND planter_id = '{$row['planter_id']}'";
+                    $query_numberplants = "SELECT * FROM plants WHERE plant_owner_user_id = '{$_SESSION['id']}' AND plant_planter_id = '{$row['planter_id']}'";
                     #$result_countplants = mysqli_query($conn, $query_numberplants);
                     $result_countplants = mysqli_num_rows($query_numberplants);
                     echo $result_countplants;
