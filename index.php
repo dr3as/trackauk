@@ -20,7 +20,7 @@ if (!$conn) {
 //fakelogin
 if ($_POST["login"] == "yes") { 
     // Prepare and bind the SQL statement 
-
+echo "test";
 $stmt = $mysqli->prepare("SELECT user_id, user_password FROM users WHERE user_username = ?"); $stmt->bind_param("s", $username); 
 
 // Get the form data 
