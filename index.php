@@ -37,14 +37,16 @@ if (!$conn) {
     <body>
         <h1>AukTracker</h1>Track your plants...
         <br>
-        <br>
-        <br>
-        <a href="index.php?show=timeline">Timeline</a>&nbsp &nbsp 
-        <a href="index.php?show=plants">Planters and Plants</a>&nbsp &nbsp 
-        <a href="index.php?show=add">Add</a>&nbsp &nbsp 
-        <a href="index.php?show=settings">Settings</a>
-        <br>
         <?php
+        if ($_SESSION["username"]) {
+        echo "<br>
+        <br>
+        <a href=\"index.php?show=timeline\">Timeline</a>&nbsp &nbsp 
+        <a href=\"index.php?show=plants\">Planters and Plants</a>&nbsp &nbsp 
+        <a href=\"index.php?show=add\">Add</a>&nbsp &nbsp 
+        <a href=\"index.php?show=settings\">Settings</a>
+        <br>"; }
+        
         if (is_null($_GET["show"])) {
             $show = "default";
              }
