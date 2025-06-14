@@ -4,7 +4,7 @@
 //ini_set('display_errors', '1');
 error_reporting(0);
 ini_set('display_errors', '0');
-
+session_start();
 //add configfile
 include "config.php";
 //do initial db connect
@@ -16,7 +16,7 @@ if (!$conn) {
 
 //fakelogin
 if ($_GET["fakeauth"] == "yes") { 
-session_start();
+
 // Set the session variables 
 $_SESSION["loggedin"] = true;
 $_SESSION["id"] = 1;
