@@ -14,7 +14,6 @@ ini_set('display_errors', '1');
         <br>
         <a href="index.php?show=timeline">Timeline</a>&nbsp &nbsp <a href="index.php?show=stats">Stats</a>&nbsp &nbsp <a href="index.php?show=add">Add</a>&nbsp &nbsp <a href="index.php?show=settings">Settings</a>
         <?php
-
         if (is_null($_GET["show"])) {
             $show = "default";
             echo $show; }
@@ -23,7 +22,7 @@ ini_set('display_errors', '1');
             $show = $_GET["show"];
             echo $show;
         }
-        if ($show = "default")
+        if ($show == "default")
             echo "Default";
         ?>
     </body>
