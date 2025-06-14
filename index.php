@@ -16,9 +16,11 @@ ini_set('display_errors', '1');
         <?php
         if (is_null($_GET["show"]))
             $show == "default";
+            echo $show;
         else {
             echo $_GET["show"];
             $show == $_GET["show"];
+            echo $show;
         }
         if ($show = "default")
             echo "Default";
