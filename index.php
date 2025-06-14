@@ -28,16 +28,16 @@ ini_set('display_errors', '0');
             echo "Welcome, please register, but this does not work atm";
             }
         elseif ($show == "timeline") {
-            echo "Timeline<br>date<br>test<br>date"
+            echo "Timeline<br>date<br>test<br>date";
         }
         elseif ($show == "stats") {
-            echo "Stats<br>planted on date"
+            echo "Stats<br>planted on date";
         }
         elseif ($show == "add") {
-            echo "Add<br>Insert form for adding to timeline or stats"
+            echo "Add<br>Insert form for adding to timeline or stats";
         }
         elseif ($show == "settings") {
-            echo "Settings<br>whatever..."
+            echo "Settings<br>whatever...";
         }
         ?>
     </body>
