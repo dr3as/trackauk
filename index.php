@@ -11,14 +11,22 @@ include "languages.php";
 include "planters.php";
 include "plants.php";
 //do initial db connect
-$conn = mysqli_connect($db_host, $db_username, $db_password);
+$conn = mysqli_connect($db_host, $db_username, $db_password, "authtracker");
 
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
   }
 
 //fakelogin
-//if ($_GET["fakeauth"] == "yes") { 
+if ($_POST["login"] == "yes") { 
+    // Prepare and bind the SQL statement 
+$stmt = $mysqli->prepare("SELECT id, password FROM users WHERE username = ?"); $stmt->bind_param("s", $username); 
+
+// Get the form data 
+$username = $_POST['username']; $password = $_POST['password']; 
+
+// Execute the SQL statement 
+$stmt->execute(); $stmt->store_result();
 
 // Set the session variables 
 //$_SESSION["loggedin"] = true;
@@ -27,7 +35,7 @@ if (!$conn) {
 //$_SESSION["language"] = "2"; 
 // Redirect to the user's dashboard 
 //header("Location: index.php");
-//}
+}
 
 ?>
 <html>
