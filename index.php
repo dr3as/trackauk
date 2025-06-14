@@ -132,7 +132,7 @@ $stmt->close();
             echo "<br>";
             echo $resultany_planters;
             echo "<br>";
-            echo $resultany_plants
+            echo $resultany_plants;
             echo "<br><a href=\"index.php?logout=yes\">Log Out</a>";
             }
         ?>
