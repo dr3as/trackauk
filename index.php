@@ -21,9 +21,11 @@ session_start();
 $_SESSION["loggedin"] = true;
 $_SESSION["id"] = 1;
 $_SESSION["username"] = "Dr3as"; 
-
+echo "<br>";
+echo $_SESSION['username'];
+echo "<br>";
 // Redirect to the user's dashboard 
-header("Location: index.php");}
+#header("Location: index.php");}
 
 ?>
 <html>
