@@ -130,7 +130,7 @@ $stmt->close();
                     #$result_countplants = mysqli_query($conn, $query_numberplants);
                     $result_countplants = mysqli_num_rows($query_numberplants);
                     echo $result_countplants;
-                    echo " plants."            
+                    echo " plants.";       
                     echo "<br><br>";
                 }
             }
