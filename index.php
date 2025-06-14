@@ -116,7 +116,7 @@ $stmt->close();
         echo "<br>";
         if ($_SESSION["username"]) {
             echo $_SESSION['username'];
-            echo "<br><a href=\"index.php?logout=yes\">Log Out</a>"
+            echo "<br><a href=\"index.php?logout=yes\">Log Out</a>";
             }
         ?>
     </body>
