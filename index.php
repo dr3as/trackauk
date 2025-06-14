@@ -131,7 +131,7 @@ $stmt->close();
 
         if ($_SESSION["username"]) {
             echo $_SESSION['username'];
-            echo "<br>";
+            #echo "<br>";
             #echo $_SESSION['id'];
             #echo "<br>";
             #echo $resultany_planters;
