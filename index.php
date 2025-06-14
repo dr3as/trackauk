@@ -23,7 +23,8 @@ if ($_GET["fakeauth"] == "yes") {
 // Set the session variables 
 $_SESSION["loggedin"] = true;
 $_SESSION["id"] = 1;
-$_SESSION["username"] = "Dr3as"; 
+$_SESSION["username"] = "Dr3as";
+$_SESSION["language"] = "2"; 
 // Redirect to the user's dashboard 
 header("Location: index.php");
 }
@@ -62,7 +63,7 @@ header("Location: index.php");
             echo "this and this planters with this and this plants";
         }
         elseif ($show == "add") {
-            echo "Add<br>Insert form for adding to timeline or stats";
+            echo "What do you want to add, a Planter, a Plant or something on your timeline.<br><br><a href=\"index.php?show=add\">Planter</a><br><a href=\"index.php?show=add\">Plant</a><br><a href=\"index.php?show=add\">Timeline</a>";
         }
         elseif ($show == "settings") {
             echo "Settings<br>whatever...";
