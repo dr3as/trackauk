@@ -57,7 +57,7 @@ $stmt->close()
 //$_SESSION["language"] = "2"; 
 // Redirect to the user's dashboard 
 //header("Location: index.php");
-
+}
 
 ?>
 <html>
