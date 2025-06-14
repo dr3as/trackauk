@@ -19,7 +19,10 @@ ini_set('display_errors', '0');
         <br>
         <br>
         <br>
-        <a href="index.php?show=timeline">Timeline</a>&nbsp &nbsp <a href="index.php?show=stats">Stats</a>&nbsp &nbsp <a href="index.php?show=add">Add</a>&nbsp &nbsp <a href="index.php?show=settings">Settings</a>
+        <a href="index.php?show=timeline">Timeline</a>&nbsp &nbsp 
+        <a href="index.php?show=plants">Planters and Plants</a>&nbsp &nbsp 
+        <a href="index.php?show=add">Add</a>&nbsp &nbsp 
+        <a href="index.php?show=settings">Settings</a>
         <br>
         <?php
         if (is_null($_GET["show"])) {
@@ -36,8 +39,8 @@ ini_set('display_errors', '0');
         elseif ($show == "timeline") {
             echo "Timeline<br>date<br>test<br>date";
         }
-        elseif ($show == "stats") {
-            echo "Stats<br>planted on date";
+        elseif ($show == "plants") {
+            echo "this and this planters with this and this plants";
         }
         elseif ($show == "add") {
             echo "Add<br>Insert form for adding to timeline or stats";
