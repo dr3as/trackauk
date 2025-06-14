@@ -84,8 +84,9 @@ $stmt->close();
         <a href=\"index.php?show=timeline\">Timeline</a>&nbsp &nbsp 
         <a href=\"index.php?show=plants\">Planters and Plants</a>&nbsp &nbsp 
         <a href=\"index.php?show=add\">Add</a>&nbsp &nbsp 
-        <a href=\"index.php?show=settings\">Settings</a>
+        
         <br>"; }
+        #<a href=\"index.php?show=settings\">Settings</a>
         
         if (is_null($_GET["show"])) {
             $show = "default";
