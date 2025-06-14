@@ -18,6 +18,11 @@ if (!$conn) {
   }
 
 //fakelogin
+if ($_GET["logout"] == "yes") {
+    session_destroy();
+    header("Location: index.php");
+}
+
 if ($_GET["login"] == "yes") { 
     // Prepare and bind the SQL statement 
 #echo "test";
@@ -111,7 +116,7 @@ $stmt->close();
         echo "<br>";
         if ($_SESSION["username"]) {
             echo $_SESSION['username'];
-            
+            echo "<br><a href=\"index.php?logout=yes\">Log Out</a>"
             }
         ?>
     </body>
