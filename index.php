@@ -126,7 +126,7 @@ $stmt->close();
             if(mysqli_num_rows($res) > 0){
                 while($row = mysqli_fetch_assoc($res)){
                     echo($row['planter_name']);
-                    echo "<br><br>"
+                    echo "<br><br>";
                 }
             }
         }
