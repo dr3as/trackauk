@@ -38,7 +38,7 @@ $stmt->execute(); $stmt->store_result();
 if ($stmt->num_rows > 0) { 
 
 // Bind the result to variables 
-$stmt->bind_result($id, $user_password); 
+$stmt->bind_result($user_id, $user_password); 
 
 // Fetch the result 
 $stmt->fetch(); 
@@ -47,7 +47,7 @@ $stmt->fetch();
 if ($password == $user_password) { 
 
 // Set the session variables 
-$_SESSION['loggedin'] = true; $_SESSION['id'] = $id; $_SESSION['username'] = $username; 
+$_SESSION['loggedin'] = true; $_SESSION['id'] = $user_id; $_SESSION['username'] = $username; 
 
 // Redirect to the user's dashboard 
 header("Location: index.php"); exit; } else { echo "Incorrect password!"; } } else { echo "User not found!"; } 
@@ -77,7 +77,7 @@ $stmt->close();
         $query_anyplanters = mysqli_query($conn, "SELECT * FROM planters WHERE planter_owner_user_id = $_SESSION['id']");
         $resultany_planters = mysqli_num_rows($query_anyplanters);
 
-        $query_anyplants = mysqli_query($conn, "SELECT * FROM plants  WHERE plant_owner_user_id = $_SESSION['id']");
+        $query_anyplants = mysqli_query($conn, "SELECT * FROM plants WHERE plant_owner_user_id = $_SESSION['id']");
         mysqli_num_rows($query_anyplants);
         $resultany_plants = mysqli_num_rows($query_anyplants);
         echo "<br>
