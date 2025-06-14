@@ -132,11 +132,11 @@ $stmt->close();
         if ($_SESSION["username"]) {
             echo $_SESSION['username'];
             echo "<br>";
-            echo $_SESSION['id'];
-            echo "<br>";
-            echo $resultany_planters;
-            echo "<br>";
-            echo $resultany_plants;
+            #echo $_SESSION['id'];
+            #echo "<br>";
+            #echo $resultany_planters;
+            #echo "<br>";
+            #echo $resultany_plants;
             echo "<br><a href=\"index.php?logout=yes\">Log Out</a>";
             }
         ?>
