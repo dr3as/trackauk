@@ -120,7 +120,15 @@ $stmt->close();
             echo "Timeline<br>date<br>test<br>date";
         }
         elseif ($show == "plants") {
-            echo "this and this planters with this and this plants";
+            #echo "this and this planters with this and this plants";
+            $query_listplanters = "SELECT * FROM planters WHERE planter_owner_user_id = '{$_SESSION['id']}'";
+            $result_listplanters = mysqli_query($conn, $qry);
+            if(mysqli_num_rows($res) > 0){
+                while($row = mysqli_fetch_assoc($res)){
+                    echo($row['planter_name']);
+                    echo "<br><br>"
+                }
+            }
         }
         elseif ($show == "add") {
             echo "What do you want to add, a Planter, a Plant or something on your timeline.<br><br><a href=\"index.php?show=add\">Planter</a><br><a href=\"index.php?show=add\">Plant</a><br><a href=\"index.php?show=add\">Timeline</a>";
