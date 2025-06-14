@@ -13,19 +13,32 @@ ini_set('display_errors', '0');
         <br>
         <br>
         <br>
-        <br>
         <a href="index.php?show=timeline">Timeline</a>&nbsp &nbsp <a href="index.php?show=stats">Stats</a>&nbsp &nbsp <a href="index.php?show=add">Add</a>&nbsp &nbsp <a href="index.php?show=settings">Settings</a>
+        <br>
         <?php
         if (is_null($_GET["show"])) {
             $show = "default";
-            echo $show; }
+             }
         else {
-            echo $_GET["show"];
+            
             $show = $_GET["show"];
-            echo $show;
+            
         }
-        if ($show == "default")
-            echo "Default";
+        if ($show == "default"){
+            echo "Welcome, please register, but this does not work atm";
+            }
+        elseif ($show == "timeline") {
+            echo "Timeline<br>date<br>test<br>date"
+        }
+        elseif ($show == "stats") {
+            echo "Stats<br>planted on date"
+        }
+        elseif ($show == "add") {
+            echo "Add<br>Insert form for adding to timeline or stats"
+        }
+        elseif ($show == "settings") {
+            echo "Settings<br>whatever..."
+        }
         ?>
     </body>
 </html>
