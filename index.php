@@ -1,4 +1,10 @@
 <?php
+//errorcode or not
+//error_reporting(E_ALL);
+//ini_set('display_errors', '1');
+error_reporting(0);
+ini_set('display_errors', '0');
+
 //add configfile
 include "config.php";
 //do initial db connect
@@ -17,11 +23,6 @@ $_SESSION['loggedin'] = true; $_SESSION['id'] = 1; $_SESSION['username'] = "Dr3a
 // Redirect to the user's dashboard 
 header("Location: index.php"); exit; }
 
-//errorcode or not
-//error_reporting(E_ALL);
-//ini_set('display_errors', '1');
-error_reporting(0);
-ini_set('display_errors', '0');
 ?>
 <html>
     <head>
