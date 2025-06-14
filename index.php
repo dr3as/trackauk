@@ -128,7 +128,7 @@ $stmt->close();
                     echo($row['planter_name']);
                     $query_numberplants = "SELECT * FROM plants WHERE plant_owner_user_id = '{$_SESSION['id']}' AND plant_planter_id = '{$row['planter_id']}'";
                     #$result_countplants = mysqli_query($conn, $query_numberplants);
-                    $result_countplants = mysqli_num_rows($query_numberplants);
+                    $result_countplants = mysqli_num_rows($conn, $query_numberplants);
                     echo $result_countplants;
                     echo " plants.";       
                     echo "<br><br>";
