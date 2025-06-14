@@ -25,7 +25,7 @@ echo "<br>";
 echo $_SESSION['username'];
 echo "<br>";
 // Redirect to the user's dashboard 
-#header("Location: index.php");
+header("Location: index.php");
 }
 
 ?>
