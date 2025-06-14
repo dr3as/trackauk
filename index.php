@@ -56,7 +56,7 @@ if (!$conn) {
         if (is_null($_SESSION["username"])) {
             echo "<form action=\"index.php?login=yes\" method=\"post\">
             <label for=\"username\">Username:</label>
-            <input id=\"username\" name=\"username\" required=\"\" type=\"text\" />
+            <input id=\"username\" name=\"username\" required=\"\" type=\"text\" /><br>
             <label for=\"password\">Password:</label> <input id=\"password\" name=\"password\" required=\"\" type=\"password\" />
             <input name=\"login\" type=\"submit\" value=\"Login\" />
             </form>";
