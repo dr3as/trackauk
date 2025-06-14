@@ -5,8 +5,11 @@
 error_reporting(0);
 ini_set('display_errors', '0');
 session_start();
-//add configfile
+//add configfiles
 include "config.php";
+include "languages.php";
+include "planters.php";
+include "plants.php";
 //do initial db connect
 $conn = mysqli_connect($db_host, $db_username, $db_password);
 
