@@ -21,7 +21,7 @@ if (!$conn) {
 if ($_GET["login"] == "yes") { 
     // Prepare and bind the SQL statement 
 echo "test";
-$stmt = $con->prepare("SELECT user_id, user_password FROM users WHERE user_username = ?"); $stmt->bind_param("s", $username); 
+$stmt = $conn->prepare("SELECT user_id, user_password FROM users WHERE user_username = ?"); $stmt->bind_param("s", $username); 
 
 // Get the form data 
 $username = $_POST['username']; $password = $_POST['password']; 
