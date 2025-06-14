@@ -21,7 +21,7 @@ if (!$conn) {
 if ($_POST["login"] == "yes") { 
     // Prepare and bind the SQL statement 
 
-$stmt = $mysqli->prepare("SELECT username_id, password FROM users WHERE user_username = ?"); $stmt->bind_param("s", $username); 
+$stmt = $mysqli->prepare("SELECT user_id, user_password FROM users WHERE user_username = ?"); $stmt->bind_param("s", $username); 
 
 // Get the form data 
 $username = $_POST['username']; $password = $_POST['password']; 
@@ -33,13 +33,13 @@ $stmt->execute(); $stmt->store_result();
 if ($stmt->num_rows > 0) { 
 
 // Bind the result to variables 
-$stmt->bind_result($id, $hashed_password); 
+$stmt->bind_result($id, $user_password); 
 
 // Fetch the result 
 $stmt->fetch(); 
 
 // Verify the password 
-if (password_verify($password, $hashed_password)) { 
+if ($password == $user_password) { 
 
 // Set the session variables 
 $_SESSION['loggedin'] = true; $_SESSION['id'] = $id; $_SESSION['username'] = $username; 
