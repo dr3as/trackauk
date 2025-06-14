@@ -104,12 +104,12 @@ $stmt->close();
             </form>";
         }
         elseif ($show == "default"){
-            if (condition) {
-                # code...
-            }
-            else {
+            #if (condition) {
+            #    # code...
+            #}
+            #else {
                 echo "Welcome, please click on the menu above";
-            }
+            #}
             
             }
         elseif ($show == "timeline") {
@@ -125,6 +125,7 @@ $stmt->close();
             echo "Settings<br>whatever...";
         }
         echo "<br>";
+
         if ($_SESSION["username"]) {
             echo $_SESSION['username'];
             echo "<br>";
