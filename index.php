@@ -16,7 +16,7 @@ if (!$conn) {
 
 //fakelogin
 if ($_GET["fakeauth"] == "yes") { 
-
+session_start();
 // Set the session variables 
 $_SESSION['loggedin'] = true; $_SESSION['id'] = 1; $_SESSION['username'] = "Dr3as"; 
 
