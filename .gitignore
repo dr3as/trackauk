@@ -1,0 +1,8 @@
+/config.cfg
+
+
+# Log files
+*.log
+
+# htaccess
+/.htaccess
