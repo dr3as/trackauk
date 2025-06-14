@@ -1,9 +1,9 @@
 <?php
 //errorcode or not
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
-//error_reporting(0);
-//ini_set('display_errors', '0');
+//error_reporting(E_ALL);
+//ini_set('display_errors', '1');
+error_reporting(0);
+ini_set('display_errors', '0');
 session_start();
 //add configfiles
 include "config.php";
@@ -126,6 +126,11 @@ $stmt->close();
             if(mysqli_num_rows($result_listplanters) > 0){
                 while($row = mysqli_fetch_assoc($result_listplanters)){
                     echo($row['planter_name']);
+                    $query_numberplants = "SELECT * FROM plants WHERE plant_owner_user_id = '{$_SESSION['id']}' AND planter_id = '{$row['planter_id']}'";
+                    #$result_countplants = mysqli_query($conn, $query_numberplants);
+                    $result_countplants = mysqli_num_rows($query_numberplants);
+                    echo $result_countplants;
+                    echo " plants."            
                     echo "<br><br>";
                 }
             }
