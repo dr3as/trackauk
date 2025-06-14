@@ -61,7 +61,7 @@ ini_set('display_errors', '0');
         elseif ($show == "settings") {
             echo "Settings<br>whatever...";
         }
-        <br>
+        echo "<br>";
         echo $_SESSION['username'];
         ?>
     </body>
