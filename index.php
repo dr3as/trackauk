@@ -59,7 +59,7 @@ if (!$conn) {
             <input id=\"username\" name=\"username\" required=\"\" type=\"text\" />
             <label for=\"password\">Password:</label> <input id=\"password\" name=\"password\" required=\"\" type=\"password\" />
             <input name=\"login\" type=\"submit\" value=\"Login\" />
-            </form>"
+            </form>";
         }
         elseif ($show == "default"){
             echo "Welcome, please register, but this does not work atm";
