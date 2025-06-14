@@ -104,12 +104,15 @@ $stmt->close();
             </form>";
         }
         elseif ($show == "default"){
-            #if (condition) {
-            #    # code...
-            #}
-            #else {
+            if ($resultany_planters = 0) {
+                echo "You have not added any planters, please click Add above";
+            }
+            elseif ($resultany_plants = 0) {
+                echo "You have not added any plants, please click Add above";
+            }
+            else {
                 echo "Welcome, please click on the menu above";
-            #}
+            }
             
             }
         elseif ($show == "timeline") {
